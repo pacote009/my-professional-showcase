@@ -7,7 +7,13 @@ const Hero = () => {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] animate-pulse-glow" />
       
       <div className="relative z-10 text-center max-w-3xl mx-auto">
-        <div className="animate-reveal-up" style={{ animationDelay: "0.1s" }}>
+        <div className="animate-reveal-up mb-6" style={{ animationDelay: "0.1s" }}>
+          <div className="w-28 h-28 rounded-full bg-card border-2 border-primary/30 mx-auto flex items-center justify-center text-3xl font-bold text-primary shadow-lg shadow-primary/10">
+            VM
+          </div>
+        </div>
+
+        <div className="animate-reveal-up" style={{ animationDelay: "0.2s" }}>
           <p className="font-mono text-sm text-primary tracking-wider uppercase mb-6">
             Fullstack · Cybersecurity · Solutions
           </p>
