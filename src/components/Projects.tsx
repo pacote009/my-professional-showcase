@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
@@ -8,13 +8,17 @@ const projects = [
     description:
       "Plataforma fullstack para gestão de chamados e ordens de serviço com painel administrativo, autenticação de usuários e relatórios. Implantada e utilizada em ambiente produtivo.",
     stack: ["React", "Vite", "PostgreSQL", "REST API", "Linux"],
+    liveUrl: "https://ativix.com.br",
+    repoUrl: "https://github.com/pacote009",
   },
   {
     title: "Autoatendimento Escolar",
     subtitle: "Sistema integrado com hardware",
     description:
       "Aplicação em Python para totens de autoatendimento com controle de saldo, carrinho de compras, emissão de comprovantes e integração com impressoras térmicas Zebra.",
-    stack: ["Python", "Hardware Integration", "Zebra Printers", "SQL"],
+    stack: ["Python", "Integração de Hardware", "Zebra", "SQL"],
+    liveUrl: null,
+    repoUrl: "https://github.com/pacote009",
   },
 ];
 
@@ -45,18 +49,40 @@ const Projects = () => {
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors mt-1" />
               </div>
-              <p className="text-sm text-secondary-foreground leading-relaxed mb-6">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-1.5">
+
+              <p className="text-sm text-secondary-foreground leading-relaxed mb-6">{project.description}</p>
+
+              <div className="flex flex-wrap gap-1.5 mb-6">
                 {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs font-mono px-2 py-0.5 rounded bg-secondary text-secondary-foreground"
-                  >
+                  <span key={tech} className="text-xs font-mono px-2 py-0.5 rounded bg-secondary text-secondary-foreground">
                     {tech}
                   </span>
                 ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium border border-primary/40 text-primary hover:bg-primary/10 transition-colors"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    Ver projeto
+                  </a>
+                )}
+                {project.repoUrl && (
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium border border-border hover:border-primary/30 hover:text-primary transition-colors"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    Código
+                  </a>
+                )}
               </div>
             </div>
           ))}
