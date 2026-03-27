@@ -8,7 +8,7 @@ const projects = [
     description:
       "Plataforma fullstack para gestão de chamados e ordens de serviço com painel administrativo, autenticação de usuários e relatórios. Implantada e utilizada em ambiente produtivo.",
     stack: ["React", "Vite", "PostgreSQL", "REST API", "Linux"],
-    liveUrl: "https://ativix.com.br",
+    liveUrl: "https://ativix.vercel.app/",
     repoUrl: "https://github.com/pacote009",
   },
   {
