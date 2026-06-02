@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Portfolio Pessoal
 
-TODO: Document your project here
+Projeto de portfólio pessoal desenvolvido com React + Vite.
